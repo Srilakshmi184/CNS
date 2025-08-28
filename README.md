@@ -1,6 +1,8 @@
 ## EX. NO: 1 : IMPLEMENTATION OF CAESAR CIPHER
  
+## NAME-SRILAKSHMI.B.H
 
+## REG.NO-212224100057
 ## AIM:
 
 To implement the simple substitution technique named Caesar cipher using C language.
@@ -28,7 +30,36 @@ becomes C. To change a message back, each letter is replaced by the one three be
 
 
 PROGRAM :-
+```
+#include <stdio.h>
+#include <string.h>
+void caesarCipher(char *text, int shift) 
+{
+    for (int i = 0; text[i]; i++) 
+    {
+        if (text[i] >= 'A' && text[i] <= 'Z')
+        text[i] = ((text[i]- 'A' + shift) % 26) + 'A';
+        
+    }
+ }
+int main() 
+{
+    char text[] = "SRILAKSHMI.B.H";
+    printf("Plain Text: %s \n",text);
+    caesarCipher(text, 3);
+    printf("Encrypted Message: %s\n", text);
+    caesarCipher(text,-3);
+    printf("Decrypted Message: %s\n", text);
+    return 0;   
+}
+```
 
 
 
 OUTPUT :-
+
+<img width="822" height="312" alt="image" src="https://github.com/user-attachments/assets/c40525ab-b8f2-4271-a386-ee2ac4c85615" />
+
+RESULT :-
+
+The program executed successfully
